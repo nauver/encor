@@ -17,6 +17,7 @@
   <div>
     <h1>The corpus at a glance</h1>
     <p class="sub" id="sub">loading…</p>
+    <p class="sub" style="opacity:.7">drag to move · scroll or pinch to zoom</p>
   </div>
   <nav>
     <button id="playBtn">Present</button>
@@ -26,7 +27,13 @@
   </nav>
 </header>
 
-<div id="stage"><svg id="map" role="img" aria-label="Every quote in the corpus, grouped by theme"></svg></div>
+<div id="stage"><svg id="map" role="img" aria-label="Every quote in the corpus, grouped by theme. Drag to move, scroll or pinch to zoom."></svg></div>
+
+<div id="zoombar">
+  <button id="zoomIn"  aria-label="Zoom in">+</button>
+  <button id="zoomOut" aria-label="Zoom out">−</button>
+  <button id="fit" aria-label="Fit the whole corpus">Fit</button>
+</div>
 
 <div id="legend"></div>
 <div id="tip"></div>
