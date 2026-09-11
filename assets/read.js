@@ -5,7 +5,38 @@
    Exposes: boot(), select(i), draw(), renderList()
    ========================================================================= */
 
+// Filtre d'entree : read.html?edition=EuroPCom%202026 ou ?event=EuroPCom
+// La page d'accueil envoie ici avec un perimetre deja choisi, pour ne pas
+// ouvrir dix-huit onglets d'un coup.
+let SCOPE = null;
+function applyScope(){
+  const p = new URLSearchParams(location.search);
+  const ed = p.get("edition"), ev = p.get("event"), q0 = p.get("q");
+  if (ed){
+    SCOPE = ed;
+    const keep = SESSIONS.filter(s => s.edition === ed);
+    if (keep.length){ SESSIONS.length = 0; SESSIONS.push(...keep); }
+  } else if (ev){
+    SCOPE = ev;
+    const keep = SESSIONS.filter(s => (s.edition||"").toLowerCase().includes(ev.toLowerCase()));
+    if (keep.length){ SESSIONS.length = 0; SESSIONS.push(...keep); }
+  }
+  // Ordre : editions recentes d'abord, puis chronologique dans l'edition.
+  SESSIONS.sort((a,b) => (b.edition||"").localeCompare(a.edition||"") || a.date.localeCompare(b.date));
+  if (q0){
+    const box = document.getElementById("q");
+    box.value = q0; query = q0; TERMS = expand(q0);
+  }
+  const crumb = document.getElementById("scope");
+  if (crumb){
+    crumb.innerHTML = SCOPE
+      ? `<a href="index.html">enCoR</a> › <b>${esc(SCOPE)}</b> · <a href="read.html">all events</a>`
+      : `<a href="index.html">enCoR</a> › <b>every event</b>`;
+  }
+}
+
 function boot(){
+  applyScope();
   if (!SESSIONS.length){
     document.getElementById("list").innerHTML="<p style='color:var(--soft)'>No dataset loaded. Check data/index.js.</p>";
     return;
@@ -13,7 +44,7 @@ function boot(){
   const tabs=document.getElementById("tabs");
   SESSIONS.forEach((s,i)=>{
     const b=document.createElement("button");
-    b.type="button"; b.role="tab"; b.textContent=s.title.replace(/^EuroPCom \d+ — /,"");
+    b.type="button"; b.role="tab"; b.textContent = SCOPE ? s.title.replace(/^EuroPCom \d+ — /,"") : s.title.replace(/^EuroPCom /,"").replace(" — "," · ");
     b.title=s.title;
     b.onclick=()=>{ query=""; theme=null; document.getElementById("q").value=""; select(i); };
     tabs.appendChild(b);

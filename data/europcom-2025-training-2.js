@@ -3,7 +3,7 @@ registerSession(
   "id": "europcom-2025-training-2",
   "sessionId": 1980,
   "title": "EuroPCom 2025 — Training 2: Simulation game on disinformation",
-  "edition": "EuroPCom 2026",
+  "edition": "EuroPCom 2025",
   "date": "2025-07-04",
   "durationSec": 4533,
   "reference": "europcom-2025-training-2",

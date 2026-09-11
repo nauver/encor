@@ -3,7 +3,7 @@ registerSession(
   "id": "europcom-2025-workshop-1",
   "sessionId": 1967,
   "title": "EuroPCom 2025 — Workshop 1: Cities and regions as trust builders",
-  "edition": "EuroPCom 2026",
+  "edition": "EuroPCom 2025",
   "date": "2025-07-03",
   "durationSec": 4375,
   "reference": "europcom-2025-workshop-1",

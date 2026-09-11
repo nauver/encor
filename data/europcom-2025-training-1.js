@@ -3,7 +3,7 @@ registerSession(
   "id": "europcom-2025-training-1",
   "sessionId": 1975,
   "title": "EuroPCom 2025 — Training 1: Trust-based advocacy campaigns",
-  "edition": "EuroPCom 2026",
+  "edition": "EuroPCom 2025",
   "date": "2025-07-03",
   "durationSec": 4246,
   "reference": "europcom-2025-training-1",

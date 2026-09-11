@@ -3,7 +3,7 @@ registerSession(
   "id": "europcom-2025-closing",
   "sessionId": 1970,
   "title": "EuroPCom 2025 — Closing session",
-  "edition": "EuroPCom 2026",
+  "edition": "EuroPCom 2025",
   "date": "2025-07-04",
   "durationSec": 2429,
   "reference": "europcom-2025-closing-session",

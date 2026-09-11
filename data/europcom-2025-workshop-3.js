@@ -3,7 +3,7 @@ registerSession(
   "id": "europcom-2025-workshop-3",
   "sessionId": 1977,
   "title": "EuroPCom 2025 — Workshop 3: Revitalising trust",
-  "edition": "EuroPCom 2026",
+  "edition": "EuroPCom 2025",
   "date": "2025-07-04",
   "durationSec": 3786,
   "reference": "europcom-2025-workshop-3",

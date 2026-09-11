@@ -3,7 +3,7 @@ registerSession(
   "id": "europcom-2025-workshop-2",
   "sessionId": 1968,
   "title": "EuroPCom 2025 — Workshop 2: Public communication in the AI age",
-  "edition": "EuroPCom 2026",
+  "edition": "EuroPCom 2025",
   "date": "2025-07-04",
   "durationSec": 4734,
   "reference": "europcom-2025-workshop-2",

@@ -3,7 +3,7 @@ registerSession(
   "id": "europcom-2025-training-3",
   "sessionId": 1978,
   "title": "EuroPCom 2025 — Training 3: Trust in institutions and social media",
-  "edition": "EuroPCom 2026",
+  "edition": "EuroPCom 2025",
   "date": "2025-07-04",
   "durationSec": 4067,
   "reference": "europcom-2025-training-3",
